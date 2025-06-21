@@ -1,102 +1,185 @@
-import Image from "next/image";
+
+import Head from 'next/head';
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>ShopNext - Your Next Shopping Destination</title>
+        <meta name="description" content="Discover amazing products at ShopNext" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <Navbar />
+
+      <main>
+        {/* Hero Section */}
+        <section className="relative pt-24 pb-12 md:pt-32 md:pb-20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-1/2 mb-10 md:mb-0 animate-fadeInLeft">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+                  Discover Amazing <span className="text-indigo-600">Products</span>
+                </h1>
+                <p className="text-lg text-gray-600 mb-8 max-w-lg">
+                  Shop the latest trends and find exactly what you're looking for at prices you'll love.
+                </p>
+                <div className="flex space-x-4">
+                  <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all transform hover:scale-105">
+                    Shop Now
+                  </button>
+                  <button className="border border-gray-300 hover:border-indigo-600 text-gray-700 hover:text-indigo-600 px-6 py-3 rounded-lg font-medium transition-all">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+              <div className="md:w-1/2 animate-fadeInRight">
+                <div className="relative">
+                  <img 
+                    src="/images/product-placeholder-1.jpg" 
+                    alt="Featured Product" 
+                    className="w-full h-auto rounded-xl shadow-xl"
+                  />
+                  <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg animate-bounce-slow">
+                    <span className="text-indigo-600 font-bold text-xl">30% OFF</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Products */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Featured Products</h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Product 1 */}
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                <div className="h-64 bg-gray-200 overflow-hidden">
+                  <img 
+                    src="/images/product-placeholder-1.jpg" 
+                    alt="Product 1" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Premium Headphones</h3>
+                  <p className="text-gray-600 mb-4">Experience crystal clear sound with our premium headphones.</p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-indigo-600 font-bold text-lg">$99.99</span>
+                    <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 2 */}
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                <div className="h-64 bg-gray-200 overflow-hidden">
+                  <img 
+                    src="/images/product-placeholder-2.jpg" 
+                    alt="Product 2" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Smart Watch</h3>
+                  <p className="text-gray-600 mb-4">Stay connected and track your fitness with our smart watch.</p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-indigo-600 font-bold text-lg">$149.99</span>
+                    <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product 3 */}
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                <div className="h-64 bg-gray-200 overflow-hidden">
+                  <img 
+                    src="/images/product-placeholder-3.jpg" 
+                    alt="Product 3" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Wireless Speaker</h3>
+                  <p className="text-gray-600 mb-4">Portable wireless speaker with amazing sound quality.</p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-indigo-600 font-bold text-lg">$79.99</span>
+                    <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <button className="border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                View All Products
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-indigo-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to transform your shopping experience?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who shop with us every day.</p>
+            <button className="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105">
+              Sign Up Now
+            </button>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">ShopNext</h3>
+              <p className="text-gray-400">Your next shopping destination for quality products at affordable prices.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Products</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Customer Service</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Shipping Policy</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Returns & Refunds</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contact Us</h4>
+              <address className="text-gray-400 not-italic">
+                123 Shop Street<br />
+                Commerce City, CC 12345<br />
+                Email: info@shopnext.com<br />
+                Phone: (123) 456-7890
+              </address>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} ShopNext. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
