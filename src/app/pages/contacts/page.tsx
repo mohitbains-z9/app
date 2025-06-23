@@ -1,7 +1,6 @@
 "use client"
 import Navbar from '../../components/Navbar';
 import { useState, ChangeEvent, FormEvent } from 'react';
-import Head from 'next/head';
 
 // Define the ContactPage component properly as a function
 function ContactPage() {
@@ -48,7 +47,7 @@ function ContactPage() {
         </svg>
       ),
       title: "Library Address",
-      content: "123 Knowledge Lane, Bookville 56789"
+      content: "Garshankar , Hoshiarpur [144523]"
     },
     {
       icon: (
@@ -57,7 +56,7 @@ function ContactPage() {
         </svg>
       ),
       title: "Library Phone",
-      content: "+1 (555) 123-4567"
+      content: "6283919635"
     },
     {
       icon: (
@@ -66,7 +65,7 @@ function ContactPage() {
         </svg>
       ),
       title: "Library Email",
-      content: "contact@librarymanagement.com"
+      content: "bainsmohit45690@gmail.com"
     },
     {
       icon: (
@@ -82,10 +81,6 @@ function ContactPage() {
   return (
     <>
     <Navbar />
-      <Head>
-        <title>Contact Us | Library Management System</title>
-        <meta name="description" content="Contact the library staff for assistance" />
-      </Head>
       
       <div className="min-h-screen bg-gray-50 pt-20">
         {/* Hero Section with Book-themed background */}
@@ -266,7 +261,7 @@ function ContactPage() {
               <div className="absolute inset-0 flex items-center justify-center bg-[url('https://img.icons8.com/ios/50/000000/map-pin.png')] bg-no-repeat bg-center">
                 <div className="text-center p-6 bg-white bg-opacity-90 rounded-lg shadow-md max-w-xs">
                   <h3 className="font-bold text-blue-800 mb-2">Library Location</h3>
-                  <p className="text-gray-700 mb-3">123 Knowledge Lane, Bookville</p>
+                  <p className="text-gray-700 mb-3">Garshankar , Hoshiarpur [144523]</p>
                   <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
                     Get Directions
                   </button>

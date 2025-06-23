@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
-            ShopNext
+            Library Lynx
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link href="/pages/about" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               About
             </Link>
-            <Link href="/pages/contacts" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
+            <Link href="/pages/contacts" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"> 
               Contact
             </Link>
           </div>
