@@ -33,7 +33,7 @@ export default function Navbar() {
             <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               Home
             </Link>
-            <Link href="/pages/products" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
+            <Link href="/pages/product" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               Products
             </Link>
             <Link href="/pages/about" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
