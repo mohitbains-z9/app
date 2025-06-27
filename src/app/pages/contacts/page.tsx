@@ -47,7 +47,7 @@ function ContactPage() {
         </svg>
       ),
       title: "Library Address",
-      content: "Garshankar , Hoshiarpur [144523]"
+      content: "Garhshankar , Hoshiarpur [144523]"
     },
     {
       icon: (
@@ -261,7 +261,7 @@ function ContactPage() {
               <div className="absolute inset-0 flex items-center justify-center bg-[url('https://img.icons8.com/ios/50/000000/map-pin.png')] bg-no-repeat bg-center">
                 <div className="text-center p-6 bg-white bg-opacity-90 rounded-lg shadow-md max-w-xs">
                   <h3 className="font-bold text-blue-800 mb-2">Library Location</h3>
-                  <p className="text-gray-700 mb-3">Garshankar , Hoshiarpur [144523]</p>
+                  <p className="text-gray-700 mb-3">Garhshankar , Hoshiarpur [144523]</p>
                   <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
                     Get Directions
                   </button>

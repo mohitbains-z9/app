@@ -169,7 +169,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Contact Us</h4>
               <address className="text-gray-400 not-italic">
-                Garshankar<br />
+                Garhshankar<br />
                 Hoshiarpur City, CC 144523<br />
                 Email: bainsmohit45690@gmail.com<br />
                 Phone: 6283919635
