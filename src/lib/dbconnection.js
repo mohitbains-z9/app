@@ -2,7 +2,11 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    const uri = process.env.local.MONGO_URI;
+    if (mongoose.connection.readyState === 1) {
+      // Already connected
+      return;
+    }
+    const uri = process.env.MONGO_URI;
     if (!uri) {
       throw new Error('MONGO_URI is not defined in .env.local');
     }
@@ -17,4 +21,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB;
+export default connectDB;
