@@ -120,7 +120,7 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
-        {/* Team Section */}
+        {/* Team Section
         <div className="text-center">
           <motion.h2 
             initial={{ opacity: 0 }}
@@ -156,12 +156,12 @@ export default function AboutPage() {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-gray-800">{person.name}</h3>
                   <p className="text-indigo-600">{person.role}</p>
-                </div>
-              </motion.div>
-            ))}
+                </div> */}
+              {/* </motion.div> */}
+            {/* ))} */}
           </div>
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 }
