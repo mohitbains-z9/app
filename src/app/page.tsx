@@ -20,7 +20,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-10 md:mb-0 animate-fadeInLeft">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
-                  Discover Amazing <span className="text-indigo-600">Products</span>
+                  Discover Amazing <span className="text-indigo-700">Products</span>
                 </h1>
                 <p className="text-lg text-gray-600 mb-8 max-w-lg">
                   Shop the latest trends and find exactly what you're looking for at prices you'll love.
@@ -60,16 +60,16 @@ export default function Home() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                 <div className="h-64 bg-gray-200 overflow-hidden">
                   <img 
-                    src="/images/product-placeholder-1.jpg" 
+                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751551396/oops_jp9xzo.png" 
                     alt="Product 1" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Premium Headphones</h3>
-                  <p className="text-gray-600 mb-4">Experience crystal clear sound with our premium headphones.</p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Object Oriented Programming With C++</h3>
+                  <p className="text-gray-600 mb-4">Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-indigo-600 font-bold text-lg">$99.99</span>
+                    <span className="text-indigo-600 font-bold text-lg">1400 Rs</span>
                     <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
                       Add to Cart
                     </button>
@@ -81,16 +81,16 @@ export default function Home() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                 <div className="h-64 bg-gray-200 overflow-hidden">
                   <img 
-                    src="/images/product-placeholder-2.jpg" 
+                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751552312/ppython_plan38.jpg" 
                     alt="Product 2" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Smart Watch</h3>
-                  <p className="text-gray-600 mb-4">Stay connected and track your fitness with our smart watch.</p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Learning Python</h3>
+                  <p className="text-gray-600 mb-4">Learning the core syntax, data structures, and control flow can be achieved in a few weeks with focused effort</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-indigo-600 font-bold text-lg">$149.99</span>
+                    <span className="text-indigo-600 font-bold text-lg">1200 Rs</span>
                     <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
                       Add to Cart
                     </button>
@@ -102,16 +102,16 @@ export default function Home() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                 <div className="h-64 bg-gray-200 overflow-hidden">
                   <img 
-                    src="/images/product-placeholder-3.jpg" 
+                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751552632/dbms_p8mu41.png" 
                     alt="Product 3" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Wireless Speaker</h3>
-                  <p className="text-gray-600 mb-4">Portable wireless speaker with amazing sound quality.</p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Fundamentals of Database Management System</h3>
+                  <p className="text-gray-600 mb-4">This book is designed to provide a thorough grounding into the fundamentals of the subject while offering insights into new developments and new theories. The book retains al the winning ways of its previous edition, and is clear, simple and easy to understand.</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-indigo-600 font-bold text-lg">$79.99</span>
+                    <span className="text-indigo-600 font-bold text-lg">1200 Rs</span>
                     <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
                       Add to Cart
                     </button>
@@ -129,7 +129,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-indigo-600 text-white">
+        <section className="py-16 bg-indigo-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to transform your shopping experience?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who shop with us every day.</p>
