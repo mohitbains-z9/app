@@ -1,4 +1,4 @@
-import Admin from '../../../../models/admin';
+import Admin from '../../../../models/adminmodel';
 import connectDB from '../../../../lib/dbconnection';
 import jwt from 'jsonwebtoken';
 
@@ -50,6 +50,6 @@ export async function POST(req) {
     return new Response(JSON.stringify({ message: error.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
-    });
-  }
+    });
+  }
 }

@@ -37,7 +37,7 @@ export default function Home() {
               <div className="md:w-1/2 animate-fadeInRight">
                 <div className="relative">
                   <img 
-                    src="/images/product-placeholder-1.jpg" 
+                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751518432/1_gifl9c.png" 
                     alt="Featured Product" 
                     className="w-full h-auto rounded-xl shadow-xl"
                   />
