@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -26,7 +27,7 @@ export default function AdminLogin() {
       await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
       
       if (isMounted) {
-        router.push('/admin/dashboard');
+        router.push('/MohitBains');
       }
     } catch (err) {
       setError('Invalid credentials. Please try again.');

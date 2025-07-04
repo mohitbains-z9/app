@@ -154,7 +154,7 @@ const LibraryManagementPage = () => {
                   className="absolute top-12 left-12 w-64 h-64 bg-white rounded-2xl shadow-2xl z-10 overflow-hidden"
                 >
                   <img 
-                    src="/library-dashboard.jpg" 
+                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751553627/1_n5jdh9.webp" 
                     alt="Library Management Dashboard"
                     className="w-full h-full object-cover"
                   />
@@ -253,7 +253,7 @@ const LibraryManagementPage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials
       <section id="testimonials" className="py-16 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -301,7 +301,7 @@ const LibraryManagementPage = () => {
             </motion.button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Pricing */}
       {/* <section id="pricing" className="py-16 bg-white">
