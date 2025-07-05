@@ -88,7 +88,7 @@ const AddBookPage = () => {
       };
       
       // Replace with your actual API call
-      const response = await fetch('/api/books', {
+      const response = await fetch('/api/gdrive', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
