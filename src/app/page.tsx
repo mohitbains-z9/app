@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>Library Lynx - Your Next Shopping Destination</title>
+        <title>Library Lynx</title>
         <meta name="description" content="Discover amazing products at Library Lynx" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
