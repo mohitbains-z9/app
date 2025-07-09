@@ -1,5 +1,5 @@
 "use client"
-import Navbar from '../../components/Navbar';
+import Navbar from '../../../components/Navbar';
 import { useState, ChangeEvent, FormEvent } from 'react';
 
 // Define the ContactPage component properly as a function
