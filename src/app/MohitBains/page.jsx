@@ -133,7 +133,7 @@ const AddBookForm = () => {
         setPdfFile(null);
         setSuccess(false);
         setCurrentStep(1);
-        router.push(`/books/${result.book._id}`);
+        router.push(`/MohitBains`);
       }, 1500);
     } catch (err) {
       setError(err.message || 'An error occurred while submitting the form');

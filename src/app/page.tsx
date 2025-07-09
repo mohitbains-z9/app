@@ -1,17 +1,14 @@
-
 import Head from 'next/head';
-import Navbar from "../components/Navbar";
+
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#e6eff2]">
       <Head>
         <title>Library Lynx</title>
         <meta name="description" content="Discover amazing products at Library Lynx" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Navbar />
 
       <main>
         {/* Hero Section */}

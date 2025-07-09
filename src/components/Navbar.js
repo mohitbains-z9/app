@@ -20,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-white py-4'}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -33,8 +33,8 @@ export default function Navbar() {
             <Link href="/" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               Home
             </Link>
-            <Link href="/pages/product" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
-              Products
+            <Link href="/pages/allBooks" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
+              All Books
             </Link>
             <Link href="/pages/about" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               About
