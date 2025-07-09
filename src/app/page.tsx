@@ -67,8 +67,9 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Object Oriented Programming With C++</h3>
-                  <p className="text-gray-600 mb-4">Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.</p>
-                  <div className="flex justify-between items-center">
+                  <p className="text-gray-600 mb-4">Object-oriented programming (OOP) organizes software around objects with unique attributes and behaviors. It focuses on modeling real-world entities rather than just functions and logic.
+                  </p>
+                  <div className="flex justify-between items-centre">
                     <span className="text-indigo-600 font-bold text-lg">1400 Rs</span>
                     <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
                       Add to Cart
@@ -81,7 +82,7 @@ export default function Home() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                 <div className="h-64 bg-gray-200 overflow-hidden">
                   <img 
-                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751552312/ppython_plan38.jpg" 
+                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1752061524/images_fz9jqs.jpg" 
                     alt="Product 2" 
                     className="w-full h-full object-contain"
                   />
@@ -109,7 +110,8 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Fundamentals of Database Management System</h3>
-                  <p className="text-gray-600 mb-4">This book is designed to provide a thorough grounding into the fundamentals of the subject while offering insights into new developments and new theories. The book retains al the winning ways of its previous edition, and is clear, simple and easy to understand.</p>
+                  <p className="text-gray-600 mb-4">This book offers a solid foundation in the subject with clear, simple explanations. It also covers new developments and retains the strengths of its previous edition.
+                  </p>
                   <div className="flex justify-between items-center">
                     <span className="text-indigo-600 font-bold text-lg">1200 Rs</span>
                     <button className="bg-indigo-100 hover:bg-indigo-200 text-indigo-600 px-4 py-2 rounded-lg transition-colors">
