@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const BookGallery = () => {
   const [books, setBooks] = useState([]);
@@ -274,12 +275,12 @@ const BookGallery = () => {
                 </div>
                 <p className="text-gray-700 mb-6">{selectedBook.description}</p>
                 <div className="flex gap-3">
-                  <button className="px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    Add to Cart
-                  </button>
-                  <button className="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                    Save for Later
-                  </button>
+                  <Link 
+                    href={`/allBooks/${selectedBook._id}`} 
+                    className="px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Download Book
+                  </Link>
                 </div>
               </div>
             </motion.div>
