@@ -67,7 +67,7 @@ export default function AboutPage() {
             About Our <span className="text-indigo-600">Library Management System</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            A modern solution for managing your library's resources, members, and operations with efficiency and ease.
+            A modern solutions for managing your library's resources, members, and operations with efficiency and ease.
           </p>
         </motion.div>
 
