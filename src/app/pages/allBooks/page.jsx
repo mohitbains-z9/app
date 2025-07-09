@@ -77,10 +77,10 @@ const BookGallery = () => {
 
   if (loading && books.length === 0) {
     return (
-      <div className="min-h-screen bg-[#e6eff2] py-12 px-4 sm:px-6 lg:px-8 ">
+      <div className="min-h-screen bg-[#e6eff2] py-12 px-4 sm:px-6 lg:px-8 pt-22">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight mb-2">
+            <h1 className="text-4xl font-extrabold text-blue-500 tracking-tight mb-2">
               Our Collection
             </h1>
             <p className="text-lg text-gray-600">Discover amazing books</p>
@@ -181,7 +181,7 @@ const BookGallery = () => {
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
-                className="px-5 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center gap-1"
+                className="px-5 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center gap-1 text-black"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -201,7 +201,7 @@ const BookGallery = () => {
                     key={pageNum}
                     onClick={() => handlePageChange(pageNum)}
                     className={`px-5 py-2.5 rounded-lg border transition-all ${currentPage === pageNum ? 
-                      'bg-blue-600 text-white border-blue-600 shadow-md' : 
+                      'bg-blue-600 text-black border-blue-600 shadow-md' : 
                       'border-gray-200 hover:bg-gray-100 text-gray-700'}`}
                   >
                     {pageNum}
@@ -212,7 +212,7 @@ const BookGallery = () => {
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
-                className="px-5 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center gap-1"
+                className="px-5 py-2.5 rounded-lg border border-gray-200 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center gap-1 text-black"
               >
                 Next
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
