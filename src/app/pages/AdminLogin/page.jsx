@@ -57,8 +57,7 @@ const LoginPage = () => {
     setErrorMessage('');
 
     try {
-      // Replace with your actual authentication logic
-      const response = await fetch('/api/auth/login', {
+      const response = await fetch('/api/admin/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,16 +68,27 @@ const LoginPage = () => {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || 'Login failed');
+        // Show error from API or a default message
+        setErrorMessage(data?.message || 'Login failed. Please try again.');
+        return;
       }
 
-      // On successful login
-      router.push('/dashboard');
+      localStorage.setItem('adminData', JSON.stringify({
+        _id: data._id,
+        name: data.name,
+        email: data.email,
+        role: data.role,
+        token: data.token
+      }));
+
+      router.push('/MohitBains');
     } catch (error) {
       console.error('Login error:', error);
       setErrorMessage(error.message || 'Login failed. Please try again.');
     } finally {
-      setIsLoading(false);
+      if (isMounted) {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -145,27 +155,28 @@ const LoginPage = () => {
           {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="p-6 space-y-6"
+            className="p-6 space-y-5"
+            noValidate
           >
             {errorMessage && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="flex items-center gap-2 bg-red-50 text-red-600 p-3 rounded-lg"
+                className="flex items-start gap-2 bg-red-50 text-red-600 p-3 rounded-lg text-sm"
               >
-                <FiAlertCircle className="flex-shrink-0" />
+                <FiAlertCircle className="flex-shrink-0 mt-0.5" />
                 <span>{errorMessage}</span>
               </motion.div>
             )}
 
             {/* Email Field */}
-            <motion.div variants={itemVariants}>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+            <motion.div variants={itemVariants} className="space-y-1">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 Email Address
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FiUser className="text-gray-400" />
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                  <FiUser className="h-5 w-5" />
                 </div>
                 <input
                   type="email"
@@ -173,15 +184,19 @@ const LoginPage = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`pl-10 w-full px-4 py-2 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition`}
+                  className={`pl-10 w-full px-4 py-2 rounded-lg border ${errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-indigo-500'} focus:ring-2 focus:border-transparent outline-none transition text-gray-700`}
                   placeholder="your@email.com"
+                  autoComplete="email"
+                  aria-invalid={!!errors.email}
+                  aria-describedby={errors.email ? "email-error" : undefined}
                 />
               </div>
               {errors.email && (
                 <motion.p
                   initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-1 text-sm text-red-600"
+                  className="text-sm text-red-600"
+                  id="email-error"
                 >
                   {errors.email}
                 </motion.p>
@@ -189,13 +204,13 @@ const LoginPage = () => {
             </motion.div>
 
             {/* Password Field */}
-            <motion.div variants={itemVariants}>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+            <motion.div variants={itemVariants} className="space-y-1">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FiLock className="text-gray-400" />
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                  <FiLock className="h-5 w-5" />
                 </div>
                 <input
                   type="password"
@@ -203,15 +218,19 @@ const LoginPage = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className={`pl-10 w-full px-4 py-2 rounded-lg border ${errors.password ? 'border-red-500' : 'border-gray-300'} focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition`}
+                  className={`pl-10 w-full px-4 py-2 rounded-lg border ${errors.password ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-indigo-500'} focus:ring-2 focus:border-transparent outline-none transition text-gray-700`}
                   placeholder="••••••••"
+                  autoComplete="current-password"
+                  aria-invalid={!!errors.password}
+                  aria-describedby={errors.password ? "password-error" : undefined}
                 />
               </div>
               {errors.password && (
                 <motion.p
                   initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-1 text-sm text-red-600"
+                  className="text-sm text-red-600"
+                  id="password-error"
                 >
                   {errors.password}
                 </motion.p>
@@ -221,19 +240,9 @@ const LoginPage = () => {
             {/* Remember Me & Forgot Password */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center justify-between"
+              className="flex items-center justify-between pt-1"
             >
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
-                  Remember me
-                </label>
-              </div>
+
               <div className="text-sm">
                 <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
                   Forgot password?
@@ -242,18 +251,18 @@ const LoginPage = () => {
             </motion.div>
 
             {/* Submit Button */}
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants} className="pt-2">
               <motion.button
                 type="submit"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
                 disabled={isLoading}
-                className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition ${isLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
+                className={`w-full flex justify-center py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors ${isLoading ? 'opacity-80 cursor-not-allowed' : ''}`}
               >
                 {isLoading ? (
                   <>
-                    <FiLoader className="animate-spin mr-2" />
+                    <FiLoader className="animate-spin mr-2 h-4 w-4" />
                     Signing in...
                   </>
                 ) : (
@@ -266,7 +275,7 @@ const LoginPage = () => {
           {/* Footer */}
           <motion.div
             variants={itemVariants}
-            className="px-6 py-4 bg-gray-50 text-center"
+            className="px-6 py-4 bg-gray-50 text-center border-t border-gray-200"
           >
             <p className="text-sm text-gray-600">
               Don't have an account?{' '}
@@ -285,7 +294,7 @@ const LoginPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.7 }}
           transition={{ delay: 0.5 }}
-          className="text-center text-gray-400 text-xs mt-6"
+          className="text-center text-gray-500 text-xs mt-6"
         >
           Library Management System © {new Date().getFullYear()}
         </motion.p>

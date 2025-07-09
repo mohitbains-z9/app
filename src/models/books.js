@@ -1,4 +1,3 @@
-// models/Book.js
 import mongoose from 'mongoose';
 
 const bookSchema = new mongoose.Schema({
@@ -19,17 +18,6 @@ const bookSchema = new mongoose.Schema({
     trim: true,
     maxlength: [500, 'Description cannot exceed 500 characters'],
   },
-  isbn: {
-    type: String,
-    unique: true,
-    trim: true,
-    match: [/^\d{10}|\d{13}$/, 'Please provide a valid ISBN (10 or 13 digits)'],
-  },
-  pdfFileId: {
-    type: String,
-    required: [true, 'PDF file ID is required'],
-    trim: true,
-  },
   coverPhotoId: {
     type: String,
     trim: true,
@@ -45,7 +33,8 @@ const bookSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ['Fiction', 'Non-Fiction', 'Science', 'History', 'Biography', 'Other'],
+    enum: ['Fiction', 'Non-Fiction', 'Science Fiction', 
+    'Biography', 'History', 'Self-Help', 'Fantasy', 'Mystery'],
     default: 'Other',
   },
   publishedDate: {
@@ -54,6 +43,10 @@ const bookSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now,
+  },
+  driveLink: {
+    type: String,
+    required: true,
   },
   updatedAt: {
     type: Date,
