@@ -34,7 +34,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link href="/allBooks" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
-              All Books
+            Amazing Books
             </Link>
             <Link href="/pages/about" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               About

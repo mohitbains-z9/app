@@ -248,29 +248,15 @@ function ContactPage() {
         </div>
         
         {/* Library Location Section */}
-        <div className="bg-white py-12 px-4 border-t border-gray-200">
+      
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-bold text-center text-gray-800 mb-8 flex items-center justify-center">
-              <svg className="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-              </svg>
-              Find Our Library
+              
             </h2>
-            <div className="bg-gray-200 h-80 rounded-xl overflow-hidden relative">
-              {/* Map placeholder with library-themed overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-[url('https://img.icons8.com/ios/50/000000/map-pin.png')] bg-no-repeat bg-center">
-                <div className="text-center p-6 bg-white bg-opacity-90 rounded-lg shadow-md max-w-xs">
-                  <h3 className="font-bold text-blue-800 mb-2">Library Location</h3>
-                  <p className="text-gray-700 mb-3">Garhshankar , Hoshiarpur [144523]</p>
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
-                    Get Directions
-                  </button>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
-      </div>
+      
 
       <style jsx global>{`
         @keyframes fadeIn {
