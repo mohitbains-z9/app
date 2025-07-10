@@ -54,7 +54,7 @@ export default function AboutPage() {
 
   return (
     
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8 pt-22">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div 
@@ -66,7 +66,7 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">
             About Our <span className="text-indigo-600">Library Management System</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto pt-12">
             A modern solutions for managing your library's resources, members, and operations with efficiency and ease.
           </p>
         </motion.div>
