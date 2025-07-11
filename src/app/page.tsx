@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -116,9 +117,11 @@ export default function Home() {
             </div>
 
             <div className="text-center mt-12">
+
               <button className="border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
                 View All Amazing Books
               </button>
+              
             </div>
           </div>
         </section>
@@ -128,7 +131,6 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to transform your Learning experience?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied leaner who learn with us every day.</p>
-            
           </div>
         </section>
       </main>
