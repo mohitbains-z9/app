@@ -117,10 +117,8 @@ export default function Home() {
             </div>
 
             <div className="text-center mt-12">
-
-              <button className="border border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                View All Amazing Books
-              </button>
+                      
+             <Link href="/allBooks" className="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">Explore Books</Link>
               
             </div>
           </div>
