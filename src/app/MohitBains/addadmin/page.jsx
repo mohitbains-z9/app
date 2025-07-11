@@ -31,7 +31,7 @@ export default function AdminRegister() {
       
       // Store token and redirect
       localStorage.setItem('adminToken', response.data.token);
-      router.push('/admin/dashboard');
+      router.push('/MohitBains');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed');
       setIsSubmitting(false);

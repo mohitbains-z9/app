@@ -65,13 +65,13 @@ export default function Navbar() {
             <Link href="/" className="block text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               Home
             </Link>
-            <Link href="/products" className="block text-gray-700 hover:text-indigo-600 transition-colors font-medium">
+            <Link href="/allBooks" className="block text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               Products
             </Link>
-            <Link href="/about" className="block text-gray-700 hover:text-indigo-600 transition-colors font-medium">
+            <Link href="/pages/about" className="block text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               About
             </Link>
-            <Link href="/contact" className="block text-gray-700 hover:text-indigo-600 transition-colors font-medium">
+            <Link href="/pages/contacts" className="block text-gray-700 hover:text-indigo-600 transition-colors font-medium">
               Contact
             </Link>
           </div>
