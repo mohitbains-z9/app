@@ -224,7 +224,7 @@ const AddBookForm = () => {
                 {currentStep === 1 && (
                   <>
                     <motion.div variants={itemVariants}>
-                      <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                      <label htmlFor="title" className="text-sm font-medium text-gray-700 mb-1 flex items-center">
                         <FiType className="mr-2 text-indigo-500" />
                         Title *
                       </label>
@@ -241,7 +241,7 @@ const AddBookForm = () => {
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
-                      <label htmlFor="author" className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                      <label htmlFor="author" className="text-sm font-medium text-gray-700 mb-1 flex items-center">
                         <FiUser className="mr-2 text-indigo-500" />
                         Author *
                       </label>
@@ -258,7 +258,7 @@ const AddBookForm = () => {
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
-                      <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                      <label htmlFor="description" className="text-sm font-medium text-gray-700 mb-1 flex items-center">
                         <FiInfo className="mr-2 text-indigo-500" />
                         Description
                       </label>
@@ -273,7 +273,7 @@ const AddBookForm = () => {
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
-                      <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                      <label htmlFor="category" className="text-sm font-medium text-gray-700 mb-1 flex items-center">
                         <FiBook className="mr-2 text-indigo-500" />
                         Category
                       </label>
@@ -292,7 +292,7 @@ const AddBookForm = () => {
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
-                      <label htmlFor="publishedDate" className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                      <label htmlFor="publishedDate" className="text-sm font-medium text-gray-700 mb-1 flex items-center">
                         <FiCalendar className="mr-2 text-indigo-500" />
                         Published Date
                       </label>
@@ -312,7 +312,7 @@ const AddBookForm = () => {
                 {currentStep === 2 && (
                   <>
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                      <label className="text-sm font-medium text-gray-700 mb-1 flex items-center">
                         <FiImage className="mr-2 text-indigo-500" />
                         Cover Photo *
                       </label>
@@ -353,7 +353,7 @@ const AddBookForm = () => {
                     </motion.div>
 
                     <motion.div variants={itemVariants}>
-                      <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                      <label className="text-sm font-medium text-gray-700 mb-1 flex items-center">
                         <FiBook className="mr-2 text-indigo-500" />
                         PDF File *
                       </label>

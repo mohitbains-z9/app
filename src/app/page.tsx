@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#e6eff2]">
+    <div className="min-h-screen bg-[#c3e3ed]">
       <Head>
         <title>Library Lynx</title>
         <meta name="description" content="Discover amazing products at Library Lynx" />
@@ -22,15 +22,7 @@ export default function Home() {
                 </h1>
                 <p className="text-lg text-gray-600 mb-8 max-w-lg">
                   Explore the latest Books and find exactly what you're looking for at  you'll love.
-                </p>
-                <div className="flex space-x-4">
-                  {/* <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-all transform hover:scale-105">
-                    Shop 
-                  </button> */}
-                  <button className="border border-gray-300 hover:border-indigo-600 text-gray-700 hover:text-indigo-600 px-6 py-3 rounded-lg font-medium transition-all">
-                    Learn More
-                  </button>
-                </div>
+                </p>    
               </div>
               <div className="md:w-1/2 animate-fadeInRight">
                 <div className="relative">
@@ -39,9 +31,7 @@ export default function Home() {
                     alt="Featured Product" 
                     className="w-full h-auto rounded-xl shadow-xl"
                   />
-                  {/* <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg animate-bounce-slow">
-                    <span className="text-indigo-600 font-bold text-xl">30% OFF</span>
-                  </div> */}
+                  
                 </div>
               </div>
             </div>
@@ -49,14 +39,14 @@ export default function Home() {
         </section>
 
         {/* Featured Products */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-blue-100">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Featured Books</h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Product 1 */}
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
-                <div className="h-64 bg-gray-200 overflow-hidden">
+                <div className="h-74  bg-gray-200 overflow-hidden">
                   <img 
                     src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751551396/oops_jp9xzo.png" 
                     alt="Product 1" 

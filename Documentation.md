@@ -1,0 +1,47 @@
+SRC 
+---
+     app 
+           allBooks
+                [id] 
+                         page.jsx
+                page.jsx
+           api
+                addbooks  
+                         route.js 
+                admin
+                        login
+                              route.js
+                        register
+                              route.js
+                bookcard
+                        [id] 
+                              route.js  
+                        route.js
+          MohitBains  
+                addadmin    
+                        page.jsx               
+          pages
+                about 
+                        page.jsx
+                admin-login   
+                        page.jsx
+                contacts
+                        page.jsx
+                product
+                        page.jsx
+          
+          favicon.ico
+          globals.css
+          layout.tsx
+          page.tsx
+     components     
+         adminProtected.js
+         BookCard.tsx
+         BookForm.tsx
+         Navbar.js
+     lib
+         db.connection.js
+     models
+         adminmodel.js
+         books.js    
+     
