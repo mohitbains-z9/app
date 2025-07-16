@@ -1,5 +1,5 @@
-import  connectDB  from '../../../../lib/dbconnection'    ;
-import Book from '../../../../models/books';
+import  connectDB  from "../../../lib/dbconnection"    ;
+import Book from '../../../models/books';
 import { File, Storage } from 'megajs';
 import multer from 'multer';
 import { Readable } from 'stream';
