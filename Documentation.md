@@ -36,8 +36,6 @@ SRC
           page.tsx
      components     
          adminProtected.js
-         BookCard.tsx
-         BookForm.tsx
          Navbar.js
      lib
          db.connection.js
