@@ -1,5 +1,5 @@
-import  connectDB  from '../../../../lib/dbconnection'    ;
-import Book from '../../../../models/books';
+import  connectDB  from '../../../lib/dbconnection'    ;
+import Book from '../../../models/books';
 import { File, Storage } from 'megajs';
 import multer from 'multer';
 import { Readable } from 'stream';
@@ -63,7 +63,13 @@ export async function POST(request) {
     });
     await new Promise((resolve, reject) => {
       storage.on('ready', resolve);
-      storage.on('error', reject);
+      storage.on('error', (err) => {
+        if (err && err.message && err.message.includes('EBLOCKED')) {
+          reject(new Error('MEGA account is blocked. Please check your MEGA account status.'));
+        } else {
+          reject(err);
+        }
+      });
     });
 
     // Upload file
@@ -130,6 +136,9 @@ export async function POST(request) {
     await book.save();
     return NextResponse.json({ message: 'Book added successfully', book }, { status: 201 });
   } catch (error) {
+    if (error.message && error.message.includes('MEGA account is blocked')) {
+      return NextResponse.json({ error: error.message }, { status: 403 });
+    }
     console.error('Error in book creation:', error);
     return NextResponse.json({ error: 'Failed to add book: ' + error.message }, { status: 500 });
   }
