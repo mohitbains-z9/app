@@ -51,16 +51,17 @@ export default function Home() {
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                 <div className="h-64 bg-gray-200 overflow-hidden">
                   <img 
-                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751551396/oops_jp9xzo.png" 
+                    src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1752035057/book-covers/zmqtreavadiblnpcy5zr.png" 
                     alt="Product 1" 
                     className="w-full h-full object-contain"
+                    
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Object Oriented Programming With C++</h3>
                   <p className="text-gray-600 mb-4">Object-oriented programming organizes software around objects with unique attributes and behaviors. It focuses on modeling real-world entities rather than just functions and logic.
                   </p>
-                
+                  <Link href={"https://app-sooty-eta.vercel.app/allBooks/686deef3ef78374be8387372"} className="bg-indigo-200 text-black px-5 py-2 rounded-full font-semibold hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105">View</Link>
                 </div>
               </div>
 
@@ -76,13 +77,14 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Learning Python</h3>
                   <p className="text-gray-600 mb-4">Learning the core syntax, data structures, and control flow can be achieved in a few weeks with focused effort</p>
-                  
+                  <Link href={"https://app-sooty-eta.vercel.app/allBooks/686ca0764bd90005a29b3d43"} className="bg-indigo-200 text-black px-5 py-2 rounded-full font-semibold hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105">View</Link>
                 </div>
               </div>
 
               {/* Product 3 */}
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
                 <div className="h-64 bg-gray-200 overflow-hidden">
+                
                   <img 
                     src="https://res.cloudinary.com/dezd7vfmq/image/upload/v1751552632/dbms_p8mu41.png" 
                     alt="Product 3" 
@@ -93,7 +95,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Fundamentals of Database Management System</h3>
                   <p className="text-gray-600 mb-4">This book offers a solid foundation in the subject with clear, simple explanations. It also covers new developments and retains the strengths of its previous edition.
                   </p>
-                  
+                  <Link href={"https://app-sooty-eta.vercel.app/allBooks/686dede8ef78374be8387370"} className="bg-indigo-200 text-black px-5 py-2 rounded-full font-semibold hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105">View</Link>
                 </div>
               </div>
             </div>
