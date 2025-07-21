@@ -107,7 +107,7 @@ const AddBookForm = () => {
       if (coverPhoto) formPayload.append('coverPhoto', coverPhoto);
       if (pdfFile) formPayload.append('pdf', pdfFile);
 
-      const response = await fetch('/api/admin/addbooks', {
+      const response = await fetch('/api/addbooks', {
         method: 'POST',
         body: formPayload,
       });
